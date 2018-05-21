@@ -4,6 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>ChienFx's Blog</title>
+<link rel="stylesheet" href="css/styles.css" type="text/css">
 </head>
 
 <body> 
@@ -11,8 +12,8 @@
 <blockquote>
 <p align="center">
 <a href="https://www.fb.com/chienpham304" target="_blank"><img src="images/cfx_logo.jpg" width="120" height="120" border="1" align="center" alt="chienfx logo" title ="ChienFx Logo"></a></p>
-    <h1 align="center"><font color ="green" face="Comic Sans MS, cursive">CFx Blog</font></h1>
-    <p align="center" ><font face="Comic Sans MS, cursive"><i>-Practice makes perfect-</i></font></p>
+    <h1 align="center">CFx Blog</h1>
+    <p align="center"><i>-Practice makes perfect-</i></p>
 	<br>
 	<!--menu-->
 	<b>
@@ -33,18 +34,33 @@
 	</p>
 	<!--Contents here-->
 	<h1>Feedback to me:</h1>
-	
+	<p align="center">
 	<form name="form_feedback" method="post" action="index.html">
-	<p align="left" align="justify">
-		Your Name:<input name ="tb_name" type="text" size="50"> <br>
-		Email    :<input name ="tb_email" type="email" size="50"><br>
-		Contents<br><textarea name ="tb_content" rows="10" cols="50" align="bottom"></textarea><br>
-		Attach file: <input name="btn_file_input" type="file"><br>
-		<input type="reset" name="btn_reset" value="Reset">
-		<input type="submit" name="btn_submit" value="Submit">
-	</p>
+	<table border="0">
+		<tr>
+			<td align="right">Your name:</td>
+			<td align="left"><input name ="tb_name" type="text" size="50"></td>
+		</tr>
+		<tr>
+			<td align="right">Email:</td>
+			<td><input name ="tb_email" type="email" size="50"></td>
+		</tr>
+		<tr>
+			<td align="right"valign="top">Contents:</td>
+			<td><textarea name ="tb_content" rows="10" cols="51" align="bottom"></textarea></td>
+		</tr>
+		<tr>
+			<td align="right" >Attach file:</td>
+			<td><input name="btn_file_input" type="file" label="Choose file"></td>
+		</tr>
+		<tr>
+			<td><input type="hidden"></td>
+			<td><input type="reset" name="btn_reset" value="Reset">
+			<input type="submit" name="btn_submit" value="Submit"></td>
+		</tr>
+	</table>
 	</form>
-	
+	</p>
 	<!--End contents-->
 <!--footer-->
 <hr>
