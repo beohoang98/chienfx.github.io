@@ -1,0 +1,53 @@
+/* 
+  -----------------------------------
+  Menubar Magic
+  by Project Seven Development
+  www.projectseven.com
+  Theme 08: Vanilla
+  Vertical
+  -----------------------------------
+*/
+.p7MBM08v {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: inherit;
+	margin: 0px;
+	padding: 0px;
+}
+.p7MBM08v ul {
+	margin: 0px;
+	padding: 0px;
+}
+.p7MBM08v li {
+	list-style-type: none;
+	margin: 4px 0;
+}
+.p7MBM08v li.p7MBfirst {}
+.p7MBM08v li.p7MBlast {}
+
+.p7MBM08v a {
+	display: block;
+	color: #000000;
+	text-decoration: none;
+	background-image: url(img/p7mbm_vanilla.jpg);
+	background-repeat: repeat-x;
+	background-position: 0px -100px;
+	font-weight: normal;
+	background-color: #FFFFFF;
+	padding: 10px 16px;
+	border: 1px solid #AA9B88;
+}
+.p7MBM08v a.p7MBfirst {}
+.p7MBM08v a.p7MBlast {}
+
+.p7MBM08v a:hover {
+	color: #000000;
+	border-color: #8D7B65;
+}
+.p7MBM08v .p7MBmark {
+	font-weight: bold;
+	color: #000000;
+	cursor: default;
+}
+.p7MBM08v .p7MBmark:hover {
+	color: #000000;
+}

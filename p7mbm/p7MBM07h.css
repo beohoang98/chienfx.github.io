@@ -1,0 +1,74 @@
+/* 
+  -----------------------------------
+  Menubar Magic
+  by Project Seven Development
+  www.projectseven.com
+  Theme 07: Chocolate
+  Horizontal
+  -----------------------------------
+*/
+.p7MBM07h {
+	font-family: "Comic Sans MS", cursive;
+	font-size: inherit;
+	background-color: #484236;
+	background-image: url(img/p7mbm_chocolate_menubar.jpg);
+	background-repeat: repeat-x;
+	zoom: 1;
+	border-right: 1px solid #29261F;
+	border-bottom: 1px solid #29261F;
+	border-left: 1px solid #625946;
+}
+.p7MBM07h ul {
+	margin: 0px;
+	padding: 0px;
+	width: auto;
+}
+.p7MBM07h li {
+	float: left;
+	list-style-type: none;
+	padding: 2;
+	margin: 0px;
+	border: 1px solid #635847;
+	width: 100px;
+}
+.p7MBM07h li.p7MBfirst {
+	border-left: 0;
+}
+.p7MBM07h li.p7MBlast {}
+
+.p7MBM07h a {
+	display: block;
+	color: #847964;
+	text-decoration: none;
+	background-image: url(img/p7mbm_chocolate.jpg);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	font-weight: normal;
+	border-right: 1px solid #000000;
+	background-color: #27241C;
+	width: 100px;
+	padding-top: 10px;
+	padding-right: 16px;
+	padding-bottom: 10px;
+	padding-left: 16px;
+}
+.p7MBM07h a.p7MBfirst {}
+.p7MBM07h a.p7MBlast {}
+
+.p7MBM07h a:hover {
+	color: #B6AD9E;
+}
+.p7MBM07h .p7MBmark {
+	font-weight: bold;
+	color: #B6AD9E;
+	cursor: default;
+}
+.p7MBM07h .p7MBmark:hover {
+	color: #B6AD9E;
+}
+.p7mb_clearfloat {
+	clear: both;
+	height: 0;
+	line-height: 0.0;
+	font-size: 0;
+}

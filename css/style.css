@@ -1,0 +1,19 @@
+body{
+	background: url(img/bg.png);
+	font-family:  'Nunito', sans-serif;
+	font-size: 14px;
+
+}
+#container{
+	width: 1060px;
+	background: #272727;
+	height: 1910px;
+	padding-left: 10px;
+	padding-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Firefox */
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Safari and Chrome */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    filter: progid:DXImageTransform.Microsoft.shadow(direction=120, color=#000000, strength=4);
+}

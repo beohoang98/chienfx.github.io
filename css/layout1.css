@@ -1,0 +1,77 @@
+.clear {
+	clear: both;
+}
+body {
+	margin: 0px;
+}
+.wrapper {
+	width: 100%;
+	margin-right: 2px;
+	padding-right: 1px;
+
+}
+.banner {
+	height: 250px;
+	width: 100%;
+	background-color: #FFF;
+}
+.mainMenu {
+	height: 40px;
+	width: 100%;
+	color: #FFF;
+	background-color: #FFF;
+	margin-top: 5px;
+	padding-left: 2px;
+	border: 2px solid #FFF;
+	position: sticky;
+    top: 0;
+
+   
+}
+.recentPost {
+	height: 260px;
+	width: 990px;
+
+}
+.contentWrapper {
+	width: 100%;
+	margin-top: 5px;
+
+}
+.verticalMenu {
+	float: left;
+	width: 15%;
+	position: fixed;
+}
+.content {
+	float: left;
+	margin-left: 16%;
+	margin-top: 10px;
+	width: 75%;
+
+}
+
+.siteRight {
+	background-color: #630;
+	float: left;
+	width: 150px;
+}
+
+.footer{
+	height: 50px;
+	width: 100%;
+	display: block;
+	color: #847964;
+	text-decoration: none;
+	background-image: url(img/p7mbm_chocolate.jpg);
+	background-repeat: repeat-x;
+	background-position: 0px 0px;
+	font-weight: bold;
+	text-align: center;
+	border-right: 1px solid #1A1713;
+	background-color: #27241C;
+	padding: 10px;
+	border-top: 1px solid #6A604D;
+	border-bottom: 1px solid #1A1713;
+	border-left: 1px solid #6A604D;
+}

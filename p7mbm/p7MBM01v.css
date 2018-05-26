@@ -1,0 +1,53 @@
+/* 
+  -----------------------------------
+  Menubar Magic
+  by Project Seven Development
+  www.projectseven.com
+  Theme 01: Teal
+  Vertical
+  -----------------------------------
+*/
+.p7MBM01v {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: inherit;
+	margin: 0px;
+	padding: 0px;
+}
+.p7MBM01v ul {
+	margin: 0px;
+	padding: 0px;
+}
+.p7MBM01v li {
+	list-style-type: none;
+	background-color: #7DADB7;
+	margin: 3px 0px;
+}
+.p7MBM01v li.p7MBfirst {}
+.p7MBM01v li.p7MBlast {}
+.p7MBM01v a {
+	background-image: url(img/p7mbm_teal_v.jpg);
+	background-repeat: no-repeat;
+	display: block;
+	background-position: -300px 0px;
+	padding: 6px 12px;
+	color: #000000;
+	text-decoration: none;
+	border-top: 1px solid #BED6DC;
+	border-right: 1px solid #497983;
+	border-bottom: 1px solid #497983;
+	border-left: 1px solid #BED6DC;
+}
+.p7MBM01v a.p7MBfirst {}
+.p7MBM01v a.p7MBlast {}
+
+.p7MBM01v a:hover {
+	color: #FFFFFF;
+}
+.p7MBM01v .p7MBmark {
+	font-weight: bold;
+	color: #FFFFFF;
+	cursor: default;
+}
+.p7MBM01v .p7MBmark:hover {
+	color: #FFFFFF;
+}

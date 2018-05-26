@@ -1,0 +1,45 @@
+/* CSS Document */
+
+	
+/*menu design*/
+.menu_form{
+	list-style-type: none;
+	overflow: hidden;
+	background-color: #333;
+	font-family: "Comic Sans MS", cursive;
+}
+
+.menu_item {
+    float: left;
+}
+
+.menu_item a {
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-weight: normal;
+	vertical-align: middle;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #CCC;
+	padding-top: 10px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	margin-top: 1px;
+	margin-bottom::1px;
+}
+
+.menu_item a:hover {
+    background-color: #111;
+}
+.active {
+    background-color:orange;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
