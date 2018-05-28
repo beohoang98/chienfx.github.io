@@ -17,3 +17,9 @@ body{
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     filter: progid:DXImageTransform.Microsoft.shadow(direction=120, color=#000000, strength=4);
 }
+
+img {
+	border: thick solid #000;
+	text-align: center;
+	display: block;
+}

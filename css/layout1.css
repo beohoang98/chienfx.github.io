@@ -5,27 +5,25 @@ body {
 	margin: 0px;
 }
 .wrapper {
-	width: 100%;
+	width: 98%;
 	margin-right: 2px;
 	padding-right: 1px;
-
 }
 .banner {
 	height: 250px;
-	width: 100%;
+	width: 99%;
 	background-color: #FFF;
 }
 .mainMenu {
 	height: 40px;
-	width: 100%;
+	width: 99%;
 	color: #FFF;
 	background-color: #FFF;
 	margin-top: 5px;
 	padding-left: 2px;
 	border: 2px solid #FFF;
 	position: sticky;
-    top: 0;
-
+	top: 0;
    
 }
 .recentPost {
@@ -41,14 +39,13 @@ body {
 .verticalMenu {
 	float: left;
 	width: 15%;
-	position: fixed;
+	position: fixed;	
 }
 .content {
 	float: left;
-	margin-left: 16%;
 	margin-top: 10px;
-	width: 75%;
-
+	width: 80%;
+	margin-left: 16%;
 }
 
 .siteRight {
@@ -74,4 +71,32 @@ body {
 	border-top: 1px solid #6A604D;
 	border-bottom: 1px solid #1A1713;
 	border-left: 1px solid #6A604D;
+}
+.myImage{
+	width: 65%;
+	text-align: center;
+	clear: both;
+	border: thick solid #000;
+	display: block;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+}
+.imageComment{
+	font-style:italic;
+	text-align:center;
+	color:#06F;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;	
+}
+.youtube {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+h2 {
+	line-height: normal;
+	margin-top: 30px;
 }
