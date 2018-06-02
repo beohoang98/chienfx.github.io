@@ -23,3 +23,10 @@ img {
 	text-align: center;
 	display: block;
 }
+
+.tittle{
+	font-weight:bold;
+	font-family: Consolas;
+	margin-top:30px;
+	margin-bottom:10px;
+}
