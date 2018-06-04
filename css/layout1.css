@@ -104,16 +104,28 @@ h2 {
 .tittle{
 	font-size:30px;
 	font-weight:bold;
-	margin-top:30px;
 	margin-bottom:10px;
 	color:red;
 	background-color:yellow;
+	-webkit-border-radius:20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+	padding:10px;
+	text-shadow: 1px 1px 1px #000
 }
 .youtube_frame{
 	margin-top:10px;
-	margin-bottom:40px;
+	margin-bottom:50px;
 	width:818px;
 	height:460px;
+	margin-left:auto;
+	margin-right:auto;
 	
 	display:block;
+	-webkit-border-bottom-left-radius:20px;
+	-webkit-border-top-right-radius:20px;
+	-moz-border-bottom-left-radius:20px;
+	-moz-border-top-right-radius:20px;
+	border-bottom-left-radius:20px;
+	border-top-right-radius:20px;
 }
