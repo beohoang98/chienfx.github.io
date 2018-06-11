@@ -24,6 +24,7 @@ body {
 	border: 2px solid #FFF;
 	position: sticky;
 	top: 0;
+	overflow:hidden;
    
 }
 .recentPost {
@@ -40,6 +41,7 @@ body {
 	float: left;
 	width: 15%;
 	position: fixed;	
+	
 }
 .content {
 	float: left;
