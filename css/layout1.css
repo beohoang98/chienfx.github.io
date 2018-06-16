@@ -104,7 +104,7 @@ h2 {
 	margin-top: 30px;
 }
 .tittle{
-	font-size:30px;
+	font-size:25px;
 	font-weight:bold;
 	margin-bottom:10px;
 	color:red;
@@ -112,7 +112,7 @@ h2 {
 	-webkit-border-radius:20px;
 	-moz-border-radius:20px;
 	border-radius:20px;
-	padding:10px;
+	padding:5px;
 	text-shadow: 1px 1px 1px #000
 }
 .youtube_frame{
@@ -130,4 +130,42 @@ h2 {
 	-moz-border-top-right-radius:20px;
 	border-bottom-left-radius:20px;
 	border-top-right-radius:20px;
+}
+
+.wc-tittle{
+	font-size:40px;
+	margin-bottom:20px;
+	font-family: "consolas";
+	font-weight: bold;
+	color: orange;
+	text-shadow: 1px 1px 1px #000;
+	
+}
+
+.wc-group{
+	display: block;
+	height: 150px;
+	width: 150px;
+	border:solid 1px #FFCC33;
+	border-radius: 10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	float: left;		
+	margin:35px;
+	text-align:center;
+	font-family: comic;
+	font-weight:bold;
+	color: orange;
+	text-shadow:1px 1px 1px black;
+	background-color: #9F6;
+	padding-top: 15px;
+}
+
+.group-ico{
+	height: 100%;
+	margin-left:auto;
+	margin-right:auto;	
+	display: block;
+	margin-bottom: 10px;
+	
 }
