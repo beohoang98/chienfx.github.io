@@ -173,14 +173,19 @@ h2 {
 }
 .wc-group a{
 	text-decoration:none;
-	
+	color: tomato;
 }
 .wc-group a:visited{
 	text-decoration:none;
+	color: tomato;
 }
 .wc-group:hover{
 	text-decoration:none;
 	color: red;
+	height: 160px;
+	width: 160px;
+	margin-right:25px;
+	margin-bottom:25px;
 }
 .group-ico{
 	height: 100%;
