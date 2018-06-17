@@ -106,14 +106,24 @@ h2 {
 .tittle{
 	font-size:25px;
 	font-weight:bold;
-	margin-bottom:10px;
-	color:red;
-	background-color:yellow;
-	-webkit-border-radius:20px;
-	-moz-border-radius:20px;
-	border-radius:20px;
-	padding:5px;
-	text-shadow: 1px 1px 1px #000
+	text-decoration:none;
+	display: block;
+	border:solid 1px #FFCC33;
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;	
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;
+	font-family: comic;
+	font-weight:bold;
+	color: tomato;
+	text-shadow:1px 1px 1px black;
+	background-color: #9F6;
+	padding:10px;
+	padding-left:10px;
+	padding-right:10px;
+	margin-top:10px;
 }
 .youtube_frame{
 	margin-top:10px;
@@ -137,8 +147,8 @@ h2 {
 	margin-bottom:20px;
 	font-family: "consolas";
 	font-weight: bold;
-	color: orange;
-	text-shadow: 1px 1px 1px #000;
+	color: tomato;
+	text-shadow: 1px 1px 2px grey;
 	
 }
 
@@ -155,17 +165,59 @@ h2 {
 	text-align:center;
 	font-family: comic;
 	font-weight:bold;
-	color: orange;
-	text-shadow:1px 1px 1px black;
+	color: tomato;
+	text-shadow:1px 1px 2px grey;
 	background-color: #9F6;
 	padding-top: 15px;
+	
 }
-
+.wc-group a{
+	text-decoration:none;
+	
+}
+.wc-group a:visited{
+	text-decoration:none;
+}
+.wc-group:hover{
+	text-decoration:none;
+	color: red;
+}
 .group-ico{
 	height: 100%;
 	margin-left:auto;
 	margin-right:auto;	
 	display: block;
 	margin-bottom: 10px;
-	
+	border-radius: 10px;
+}
+
+.box{
+
+}
+.box a{
+	text-decoration:none;
+	display: block;
+	border:solid 1px #FFCC33;
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;	
+	margin:35px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	font-family: comic;
+	font-weight:bold;
+	color: tomato;
+	text-shadow:1px 1px 1px black;
+	background-color: #9F6;
+	padding:10px;
+	padding-left:10px;
+	padding-right:10px;
+}
+.box a:visited{
+	text-decoration:none;
+}
+.box a:hover{
+	text-decoration:none;
+	color: red;
 }
