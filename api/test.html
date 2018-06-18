@@ -1,0 +1,10 @@
+<script src="getdata.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', async()=>{
+		const teams = await getTeamsData();
+		const groups = await getGroupInfo();
+		const flags_team = await getAllFlags(teams);
+
+		console.log(flags_team);
+	});
+</script>
