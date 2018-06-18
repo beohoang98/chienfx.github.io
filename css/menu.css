@@ -19,7 +19,7 @@
 	text-align: center;
 	text-decoration: none;
 	font-weight: normal;
-	vertical-align: middle;
+	/* vertical-align: middle; khong the su dung cho display:block */
 	border-right-width: 1px;
 	border-right-style: solid;
 	border-right-color: #CCC;
@@ -28,7 +28,7 @@
 	padding-bottom: 10px;
 	padding-left: 30px;
 	margin-top: 1px;
-	margin-bottom::1px;
+	margin-bottom: 1px;
 }
 
 .menu_item a:hover {
