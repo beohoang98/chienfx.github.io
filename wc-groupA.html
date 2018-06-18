@@ -9,11 +9,14 @@
 	
     <script src="p7mbm/p7MBscripts.js" type="text/javascript"></script>
     <link href="p7mbm/p7MBM07v.css" rel="stylesheet" type="text/css" media="all" />
-    <!-- Start WOWSlider.com HEAD section -->
-        <link href="engine1/style.css"rel="stylesheet" type="text/css"  />
-        <script src="engine1/jquery.js" type="text/javascript" ></script>
-        <!-- End WOWSlider.com HEAD section -->
-</head>
+		
+		<!-- Start WOWSlider.com HEAD section -->
+    <link href="engine1/style.css"rel="stylesheet" type="text/css"  />
+    <script src="engine1/jquery.js" type="text/javascript" ></script>
+    <!-- End WOWSlider.com HEAD section -->
+		<link rel="stylesheet" href="/worldcup2018/css/wcGroupTable.css">
+
+	</head>
 
 <body>
 <div class="wrapper">
@@ -86,10 +89,14 @@
 		<div class="wc-tittle">WORLD CUP 2018 - Group A</div>
         <div class="clear"></div>
         
-        	<div class="tittle">Bảng xếp hạng</div>
-			<div class="fdb-box-bxh">
+					<div class="wc-panel-head">Bảng xếp hạng</div>
+					<div class="wc-panel-body flex">
+						<div id="group-A" class='wc-table'></div>
+					</div>
+					
+			<!-- <div class="fdb-box-bxh">
 				<table><tbody><tr class="fdb-box-title"><td colspan="10"><span>World Cup 2018 Russia</span><span>Bảng A</span></td></tr><tr class="fdb-box-content-head"><td><span>#</span></td><td><span>Tên Đội</span></td><td><span>ST</span></td><td><span>T</span></td><td><span>H</span></td><td><span>B</span></td><td><span>TG</span></td><td><span>TH</span></td><td><span>HS</span></td><td><span>Đ</span></td></tr><tr class="fdb-box-content-item"><td><span>1</span></td><td><img src="https://vnn-res.vgcloud.vn/fdb/img/logoteam/russland-team.svg" alt=""><span>Nga</span></td><td><span>1</span></td><td><span>1</span></td><td><span>0</span></td><td><span>0</span></td><td><span>5</span></td><td><span>0</span></td><td><span>5</span></td><td><span>3</span></td></tr><tr class="fdb-box-content-item"><td><span>2</span></td><td><img src="https://vnn-res.vgcloud.vn/fdb/img/logoteam/uruguay-team.svg" alt=""><span>Uruguay</span></td><td><span>1</span></td><td><span>1</span></td><td><span>0</span></td><td><span>0</span></td><td><span>1</span></td><td><span>0</span></td><td><span>1</span></td><td><span>3</span></td></tr><tr class="fdb-box-content-item"><td><span>3</span></td><td><img src="https://vnn-res.vgcloud.vn/fdb/img/logoteam/aegypten-team.svg" alt=""><span>Ai Cập</span></td><td><span>1</span></td><td><span>0</span></td><td><span>0</span></td><td><span>1</span></td><td><span>0</span></td><td><span>1</span></td><td><span>-1</span></td><td><span>0</span></td></tr><tr class="fdb-box-content-item"><td><span>4</span></td><td><img src="https://vnn-res.vgcloud.vn/fdb/img/logoteam/saudi-arabien-team.svg" alt=""><span>Ả Rập Xê Út</span></td><td><span>1</span></td><td><span>0</span></td><td><span>0</span></td><td><span>1</span></td><td><span>0</span></td><td><span>5</span></td><td><span>-5</span></td><td><span>0</span></td></tr></tbody></table>
-			</div>
+			</div> -->
 			
      
         
@@ -119,19 +126,48 @@
   </div>
 </div>
 <!---Scrip area -->
-<script>
-	window.onscroll = function() {myFunction()};
-	
-	var header = document.getElementById("");
-	var sticky = header.offsetHeight;
-	
-	function myFunction() {
-	  if (window.pageYOffset >= sticky) {
-		header.classList.add("sticky");
-	  } else {
-		header.classList.remove("sticky");
-	  }
-	}
-	</script>
+<script src="/worldcup2018/api/getdata.js"></script>
+<script src="/worldcup2018/api/makeGroupTable.js"></script>
+<script defer>
+	(function($){
+
+		$(document).on("DOMContentLoaded", async function(){
+				console.log('Hello');
+
+				const groupTable = $("#group-A");
+
+				groupTable.text("..Wait");
+				const teams = await getTeamsData();
+				const groups = await getGroupInfo();
+				const flags_team = await getAllFlags(teams);
+				groupTable.text("");
+
+				groupTable.wcGroupTable(groups['A'], {
+					columns: [
+						{title: "#", value: "pos"},
+						{title: "Tên Đội", value: "country", class: 'wc-table-team'},
+						{title: "ST", value: "games_played"},
+						{title: "T", value: "wins"},
+						{title: "H", value: "draws"},
+						{title: "B", value: "losses"},
+						{title: "TG", value: "goals_for"},
+						{title: "TH", value: "goals_against"},
+						{title: "HS", value: "goal_differential"},
+						{title: "Điểm", value: "points"}
+					]
+				});
+
+				$(".wc-table-team").each(function(){
+					let that = $(this);
+					let name = that.text();
+					let flag_url = flags_team[that.data('id')];
+
+					that.html("<img src=\""+ flag_url + "\">" + "<div>" + name + "</div>");
+				});
+		});
+
+	})(jQuery);
+</script>
+
 </body>
 </html>

@@ -1,3 +1,5 @@
+@import "/worldcup2018/css/wcColor.css"; 
+
 .clear {
 	clear: both;
 }
@@ -5,9 +7,10 @@ body {
 	margin: 0px;
 }
 .wrapper {
-	width: 98%;
-	margin-right: 2px;
-	padding-right: 1px;
+	/* why??? */
+	/* width: 98%; */
+	/* margin-right: 2px; */
+	/* padding-right: 1px; */
 }
 .banner {
 	height: 250px;
@@ -22,8 +25,11 @@ body {
 	margin-top: 5px;
 	padding-left: 2px;
 	border: 2px solid #FFF;
+
 	position: sticky;
+	position: -webkit-sticky; /* work on Safari */
 	top: 0;
+	
 	overflow:hidden;
    
 }
@@ -145,18 +151,24 @@ h2 {
 .wc-tittle{
 	font-size:40px;
 	margin-bottom:20px;
-	font-family: "consolas";
+	font-family: "Dusha", "consolas";
+	/* Dusha is world cup 2018 font*/
+
 	font-weight: bold;
-	color: tomato;
-	text-shadow: 1px 1px 2px grey;
-	
+	/* color: tomato; */
+	color: var(--wc-primColor);
+	padding: 1em;
+
+	/* text-shadow: 1px 1px 2px grey;	 */
 }
 
 .wc-group{
 	display: block;
 	height: 150px;
 	width: 150px;
-	border:solid 1px #FFCC33;
+
+	/* border:solid 1px #FFCC33; */
+	
 	border-radius: 10px;
 	-webkit-border-radius:10px;
 	-moz-border-radius:10px;
@@ -165,15 +177,26 @@ h2 {
 	text-align:center;
 	font-family: comic;
 	font-weight:bold;
-	color: tomato;
-	text-shadow:1px 1px 2px grey;
-	background-color: #9F6;
+
+	/* color: tomato; */
+	/* why tomato */
+	color: var(--wc-text0);
+
+	/* text-shadow:1px 1px 2px grey; */
+	/* why shadow? */
+
+	/* background-color: #9F6; */
+	/* why green? */
+	background-color: var(--wc-low0);
+
 	padding-top: 15px;
-	
+	transition: var(--wc-trans);	
 }
 .wc-group a{
+	font-family: "Dusha", sans-serif;
 	text-decoration:none;
-	color: tomato;
+	/* color: tomato; */
+	color: var(--wc-primColor);
 }
 .wc-group a:visited{
 	text-decoration:none;
@@ -225,4 +248,14 @@ h2 {
 .box a:hover{
 	text-decoration:none;
 	color: red;
+}
+
+.flex {
+	display: flex;
+	flex-flow: row wrap;
+
+	justify-content: space-around;
+}
+.flex-items {
+	margin: auto;
 }
