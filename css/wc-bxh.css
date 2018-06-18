@@ -208,7 +208,7 @@
 	color: #ffffff;
 	text-align: center;
 	padding: 12px 0px;
-	vertical-align: middle;
+	/* vertical-align: middle; */
 }
 .fdb-box-schedule .fdb-box-schedule-title2 td:last-child {
 	border-right: none;
@@ -419,7 +419,7 @@
 	text-decoration: none;
 }
 .fdb-box-history .fdb-box-history-table {
-	width: 100%
+	width: 100%;
 	border-collapse: collapse;
 	border-spacing: 0;
 	border: 2px solid #7a7878;
