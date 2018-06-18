@@ -67,6 +67,13 @@ async function getGroupInfo()
 	for (const group of rawGroupList.data)
 	{
 		let info = group.group;
+
+		let pos = 1;
+		for (let teamInfo of info.teams)
+		{
+			teamInfo.team['pos'] = pos++;
+		}
+
 		let name = info.letter;
 		groupInfo[name] = info;
 	}
@@ -76,7 +83,7 @@ async function getGroupInfo()
 
 async function getMyISOLookup()
 {
-	const res = await fetch('FifaCodeToISOCode.json');
+	const res = await fetch('/worldcup2018/api/FifaCodeToISOCode.json');
 	const json = res.json();
 	return json;
 }
@@ -92,10 +99,13 @@ async function getAllFlags(teamsData)
 
 		if (lookupISOCode.hasOwnProperty(code))
 		{
-			
+			code = lookupISOCode[code];
+		}
+		else {
+			code = code.slice(0,-1);
 		}
 
-		flags_team[id] = await getFlagsOf(name);
+		flags_team[id] = "https://countryflags.io/"+code+"/flat/64.png";
 	}
 
 	return flags_team;

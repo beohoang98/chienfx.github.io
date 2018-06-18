@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/worldcup2018/css/wcGroupTable.css">
+
+<script src="/engine1/jquery.js"></script>
+<script src="makeGroupTable.js"></script>
+<script src="getdata.js"></script>
+
+<div class='wc-group' data-name='A'></div>
+<div class='wc-group' data-name='B'></div>
+<div class='wc-group' data-name='C'></div>
+<div class='wc-group' data-name='D'></div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', async()=>{
+		const teams = await getTeamsData();
+		const groups = await getGroupInfo();
+		const flags_team = await getAllFlags(teams);
+
+		$(".wc-group").each(function(){
+			let name = $(this).data('name')
+			$(this).wcGroupTable(groups[name], {
+			columns: [
+				{title: "#", value: "pos"},
+				{title: "Tên Đội", value: "country", class: 'wc-group-team'},
+				{title: "ST", value: "games_played"},
+				{title: "T", value: "wins"},
+				{title: "H", value: "draws"},
+				{title: "B", value: "losses"},
+				{title: "TG", value: "goals_for"},
+				{title: "TH", value: "goals_against"},
+				{title: "HS", value: "goal_differential"},
+				{title: "Điểm", value: "points"}
+			]
+			});
+		});
+	});
+</script>
