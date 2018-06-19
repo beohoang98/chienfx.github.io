@@ -51,7 +51,7 @@ function makeGroupRow(values, opt)
 		let cell = $('<td/>');
 		if (!!colInfo.class) cell.addClass(colInfo.class);
 		cell.text(values.team[colInfo.value]);
-		cell.attr('data-id', values.team.id);
+		cell.attr('data-code', values.team.fifa_code);
 		cell.appendTo(row);
 	}
 

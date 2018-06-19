@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>CFx Blog</title>
+	<link href="/css/menu.css" rel="stylesheet" type="text/css" />
+	<link href="/css/layout1.css" rel="stylesheet" type="text/css" />
+	<!-- <script src="p7mbm/p7MBscripts.js" type="text/javascript"></script>
+	<link href="p7mbm/p7MBM07v.css" rel="stylesheet" type="text/css" media="all" /> -->
+	<!-- Start WOWSlider.com HEAD section -->
+	<link href="/engine1/style.css" rel="stylesheet" type="text/css" />
+	<script src="/engine1/jquery.js" type="text/javascript"></script>
+	<!-- End WOWSlider.com HEAD section -->
+
+	<link rel="stylesheet" href="/worldcup2018/css/wcColor.css">
+	<link rel="stylesheet" href="/worldcup2018/css/wcGroupTable.css">
+	<link rel="stylesheet" href="/worldcup2018/css/wcMatches.css">
+	<link rel="stylesheet" href="/css/myTab.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="banner">
+			<!-- Start WOWSlider.com BODY section -->
+			<div id="wowslider-container1">
+				<div class="ws_images">
+					<ul>
+						<li>
+							<img src="/images/banner/banner1.jpg" alt="" title="" id="wows1_0" />
+						</li>
+						<li>
+							<img src="/images/banner/banner2.jpg" alt="" title="" id="wows1_1" />
+						</li>
+					</ul>
+				</div>
+				<div class="ws_bullets">
+					<div>
+						<a href="#" title="">1</a>
+						<a href="#" title="">2</a>
+					</div>
+				</div>
+				<script type="text/javascript" src="engine1/swfobject.js"></script>
+				<span class="wsl">
+					<a href="http://wowslider.com">Javascript Sliders</a> by WOWSlider.com v4.7</span>
+				<div class="ws_shadow"></div>
+			</div>
+			<script type="text/javascript" src="engine1/wowslider.js"></script>
+			<script type="text/javascript" src="engine1/script.js"></script>
+			<!-- End WOWSlider.com BODY section -->
+		</div>
+
+		<div class="clear"></div>
+		<!--menu-->
+		<div class="mainMenu">
+			<div class="menu_form">
+				<div class="menu_item">
+					<a href="/index.html">Home</a>
+				</div>
+				<div class="menu_item">
+					<a href="#">Study</a>
+				</div>
+				<div class="menu_item ">
+					<a href="#">Relax</a>
+				</div>
+				<div class="menu_item">
+					<a href="#" title="Software sharing">Software</a>
+				</div>
+				<div class="menu_item active">
+					<a href="/main-wc2018.html" title="World Cup 2018">World Cup 2018</a>
+				</div>
+				<div class="menu_item">
+					<a href="/ms-ha-liturature.html" title="All my stories">Story</a>
+				</div>
+				<div class="menu_item" style="float:right; border-left-width: 1px; border-left-style: solid; border-left-color: #CCC;">
+					<a href="/aboutme.html" title="Introduction to me">About me</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+
+		<!-- SOCIAL LINK -->
+		<link rel="stylesheet" href="/css/social.css">
+		<div class="social" style="left: 0; top: 50px">
+			<a href="https://github.com/ChienFx" title="Github Repo" target="_blank" class="social-link social-link-github">Github</a>
+			<a href="https://www.fb.com/chienpham304" title="Facebook Profile" target="_blank" class="social-link social-link-fb">Facebook</a>
+		</div>
+
+		<div class="contentWrapper wc-banner">
+			<div style="height: 50vh"></div>
+			<div class="content" style="float: none; background-color: var(--wc-high1)" align="justify">
+				<div id="name" class='wcFont wc-tittle'></div>
+				<iframe id='frame' src="" frameborder="0" onload="resizeFrame(this)"></iframe>
+				<div class="box">
+					<a href="pre-world-cup.html" target="_blank" title="Tổng hợp Hightlight tiền World Cup 2018">
+						Giao hữu tiền World Cup 2018
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+		<div class="footer">
+			CFx Blog Info
+			<br> Email:
+			<a href="mailto:cfxblog@gmail.com">contact@cfxblog.gmail.com</a>
+			<br> ---
+			<br>
+		</div>
+	</div>
+	<!---Scrip area -->
+	<script>
+			const id = document.location.search.match(/id=(\w+)/)[1];
+			console.log(id);
+
+			fetch('/worldcup2018/highlightURL.json')
+			.then(res=>{
+				return res.json();
+			}).then(json=>{
+				if (!json.hasOwnProperty(id))
+				{
+					alert("Highlight tran nay chua cap nhat");
+					window.close();
+					return;
+				}
+
+				const url = json[id].url;
+				document.querySelector("#name").textContent = json[id].name;
+				document.querySelector('#frame').src = url;
+			});
+
+			function resizeFrame(frame) {
+				frame.style.width = frame.parentNode.offsetWidth + "px";
+				frame.style.height = frame.parentNode.offsetWidth*9/16 + "px";
+			}
+
+			window.addEventListener('resize', function() {
+				resizeFrame(document.querySelector("#frame"));
+			});
+		</script>
+</body>
+
+</html>

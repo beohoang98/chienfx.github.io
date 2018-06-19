@@ -1,36 +1,41 @@
+<meta charset="utf-8">
 <link rel="stylesheet" href="/worldcup2018/css/wcGroupTable.css">
+<link rel="stylesheet" href="/worldcup2018/css/wcMatches.css">
+<link rel="stylesheet" href="/css/layout1.css">
 
 <script src="/engine1/jquery.js"></script>
-<script src="makeGroupTable.js"></script>
+<script src="/worldcup2018/api/makeLichThiDau.js"></script>
 <script src="getdata.js"></script>
 
-<div class='wc-group' data-name='A'></div>
-<div class='wc-group' data-name='B'></div>
-<div class='wc-group' data-name='C'></div>
-<div class='wc-group' data-name='D'></div>
+<div id="games" class="flex"></div>
 
 <script>
 	document.addEventListener('DOMContentLoaded', async()=>{
 		const teams = await getTeamsData();
-		const groups = await getGroupInfo();
 		const flags_team = await getAllFlags(teams);
+		const games = await getGames();
+		const div = $("#games");
 
-		$(".wc-group").each(function(){
-			let name = $(this).data('name')
-			$(this).wcGroupTable(groups[name], {
-			columns: [
-				{title: "#", value: "pos"},
-				{title: "Tên Đội", value: "country", class: 'wc-group-team'},
-				{title: "ST", value: "games_played"},
-				{title: "T", value: "wins"},
-				{title: "H", value: "draws"},
-				{title: "B", value: "losses"},
-				{title: "TG", value: "goals_for"},
-				{title: "TH", value: "goals_against"},
-				{title: "HS", value: "goal_differential"},
-				{title: "Điểm", value: "points"}
-			]
-			});
+		games.forEach(val=>{
+			const hometeam = val.home_team;
+			const awayteam = val.away_team;
+			
+			if (hometeam.code == "TBD") return;
+
+			div.append(createMatchPanel({
+				group: '',
+				status: val.status,
+				time: val.datetime,
+				hometeam: {
+					name: hometeam.country,
+					goals: hometeam.goals
+				},
+				awayteam: {
+					name: awayteam.country,
+					goals: awayteam.goals
+				},
+				link: "/worldcup2018/highlight.html?games=val.fifa_id"
+			}));
 		});
 	});
 </script>

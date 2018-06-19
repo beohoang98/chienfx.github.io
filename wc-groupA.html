@@ -85,15 +85,20 @@
         </script>
       </div>
     </div>
-    <div class="content" style="font-size:20px" align="justify">
-		<div class="wc-tittle">WORLD CUP 2018 - Group A</div>
-        <div class="clear"></div>
-        
+    <div class="content" align="justify">
+			<div class="wc-tittle">WORLD CUP 2018 - Group A</div>
+			<div class="wc-panel">
 					<div class="wc-panel-head">Bảng xếp hạng</div>
 					<div class="wc-panel-body flex">
-						<div id="group-A" class='wc-table'></div>
+						<div id="group-standing" class='wc-table'></div>
 					</div>
-					
+			</div>
+			<div class="wc-panel">
+					<div class="wc-panel-head">Các trận đấu</div>
+					<div class="wc-panel-body">
+						<div id="group-matches" class="wc-match-row"></div>
+					</div>
+			</div>
 			<!-- <div class="fdb-box-bxh">
 				<table><tbody><tr class="fdb-box-title"><td colspan="10"><span>World Cup 2018 Russia</span><span>Bảng A</span></td></tr><tr class="fdb-box-content-head"><td><span>#</span></td><td><span>Tên Đội</span></td><td><span>ST</span></td><td><span>T</span></td><td><span>H</span></td><td><span>B</span></td><td><span>TG</span></td><td><span>TH</span></td><td><span>HS</span></td><td><span>Đ</span></td></tr><tr class="fdb-box-content-item"><td><span>1</span></td><td><img src="https://vnn-res.vgcloud.vn/fdb/img/logoteam/russland-team.svg" alt=""><span>Nga</span></td><td><span>1</span></td><td><span>1</span></td><td><span>0</span></td><td><span>0</span></td><td><span>5</span></td><td><span>0</span></td><td><span>5</span></td><td><span>3</span></td></tr><tr class="fdb-box-content-item"><td><span>2</span></td><td><img src="https://vnn-res.vgcloud.vn/fdb/img/logoteam/uruguay-team.svg" alt=""><span>Uruguay</span></td><td><span>1</span></td><td><span>1</span></td><td><span>0</span></td><td><span>0</span></td><td><span>1</span></td><td><span>0</span></td><td><span>1</span></td><td><span>3</span></td></tr><tr class="fdb-box-content-item"><td><span>3</span></td><td><img src="https://vnn-res.vgcloud.vn/fdb/img/logoteam/aegypten-team.svg" alt=""><span>Ai Cập</span></td><td><span>1</span></td><td><span>0</span></td><td><span>0</span></td><td><span>1</span></td><td><span>0</span></td><td><span>1</span></td><td><span>-1</span></td><td><span>0</span></td></tr><tr class="fdb-box-content-item"><td><span>4</span></td><td><img src="https://vnn-res.vgcloud.vn/fdb/img/logoteam/saudi-arabien-team.svg" alt=""><span>Ả Rập Xê Út</span></td><td><span>1</span></td><td><span>0</span></td><td><span>0</span></td><td><span>1</span></td><td><span>0</span></td><td><span>5</span></td><td><span>-5</span></td><td><span>0</span></td></tr></tbody></table>
 			</div> -->
@@ -134,12 +139,15 @@
 		$(document).on("DOMContentLoaded", async function(){
 				console.log('Hello');
 
-				const groupTable = $("#group-A");
+				const groupTable = $("#group-standing");
 
 				groupTable.text("..Wait");
+				
 				const teams = await getTeamsData();
 				const groups = await getGroupInfo();
 				const flags_team = await getAllFlags(teams);
+				const games = await getGames();
+
 				groupTable.text("");
 
 				groupTable.wcGroupTable(groups['A'], {
@@ -150,9 +158,9 @@
 						{title: "T", value: "wins"},
 						{title: "H", value: "draws"},
 						{title: "B", value: "losses"},
-						{title: "TG", value: "goals_for"},
-						{title: "TH", value: "goals_against"},
-						{title: "HS", value: "goal_differential"},
+						// {title: "TG", value: "goals_for"},
+						// {title: "TH", value: "goals_against"},
+						// {title: "HS", value: "goal_differential"},
 						{title: "Điểm", value: "points"}
 					]
 				});
@@ -160,10 +168,12 @@
 				$(".wc-table-team").each(function(){
 					let that = $(this);
 					let name = that.text();
-					let flag_url = flags_team[that.data('id')];
+					let flag_url = flags_team[that.data('code')];
 
 					that.html("<img src=\""+ flag_url + "\">" + "<div>" + name + "</div>");
 				});
+
+
 		});
 
 	})(jQuery);
