@@ -1,0 +1,1 @@
+Del /F "wc2018.js" && type *.js > "wc2018.temp" && type "wc2018.temp" > "wc2018.js" && Del "wc2018.temp"

@@ -8,6 +8,7 @@ $.fn.wcGroupTable = function(groupData, opt)
 	const groupTBody = makeGroupTBody(groupData, opt)
 							.appendTo(groupTable);
 
+	this.children().remove();
 	this.append(groupBody);
 	return this;
 }

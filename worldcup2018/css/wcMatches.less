@@ -1,3 +1,5 @@
+@import "./wcVar.less";
+
 .wc-match-panel {
 	position: relative;
 	width: 300px;
@@ -70,5 +72,59 @@
 	&.past {
 		filter: brightness(0.8);
 		display: none;
+	}
+}
+
+.wc-match-row {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	background-color: var(--wc-high1);
+	transition: var(--wc-trans);
+
+	&:hover {
+		box-shadow: 0px 3px 10px -2px rgba(0,0,0,0.5);
+		transform: translateY(-3px);
+		background-color: var(--wc-high0);
+	}
+	
+	&.now {
+		.wc-match-date {
+			background: var(--wc-low1);
+			background: linear-gradient(to right, fade(@low1 , 100%), fade(@low1, 0%));
+			color: var(--wc-text0);
+		}
+	}
+
+	.wc-match {
+		&-date, &-time {
+			padding: 0.5rem;
+		}
+
+		&-team {
+			padding: 0.5rem;
+			text-align: center;
+
+			&:first-child {
+				text-align: right;
+			}
+			&:last-child {
+				text-align: left;
+			}
+
+			&.win {
+				font-weight: bold;
+				background-color: var(--wc-high0);
+			}
+		}
+		&-goals {
+			padding: 0.5rem 0;
+			width: 30px;
+			text-align: center;
+
+			&.win {
+				font-weight: bold;
+			}
+		}
 	}
 }
