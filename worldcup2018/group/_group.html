@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/worldcup2018/css/wc18.css">
+<link rel="stylesheet" href="/css/layout1.css">
+<script src="/engine1/jquery.js"></script>
+<script src="/worldcup2018/api/wc2018.js"></script>
+
+<!-- se duoc load vao trang chu -->
+<div id="content">
+	<div id="group-loading">
+		<h2 class="wcFont">Loading... <span class='ico-loading'></span></h2>
+	</div>
+	<div id="group-content">
+		<div id='group-input' class='wc-panel-head wcFont'>
+			<label for="group-name">Bảng</label>
+			<select name="group-name" class="wc-select-group wcFont" id="group-name">
+				<option value="A">A</option>
+				<option value="B">B</option>
+				<option value="C">C</option>
+				<option value="D">D</option>
+				<option value="E">E</option>
+				<option value="F">F</option>
+				<option value="G">G</option>
+				<option value="H">H</option>
+			</select>
+		</div>
+		<div>
+			<div id="group-display" class="wc-table flex"></div>
+		</div>
+		<div class="wc-panel">
+			<div class="wc-panel-head wcFont">Các trận đấu</div>
+			<div id="group-matches" class="wc-panel-body wcSans"></div>
+		</div>
+	</div>
+</div>
+<script id='content-script' src="/worldcup2018/group/_group.js"></script>

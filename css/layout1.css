@@ -29,6 +29,7 @@ body {
 	position: sticky;
 	position: -webkit-sticky; /* work on Safari */
 	top: 0;
+	z-index: 999;
 	
 	overflow:hidden;
    
@@ -255,7 +256,16 @@ h2 {
 	flex-flow: row wrap;
 
 	justify-content: space-around;
+	align-items: flex-start;
 }
 .flex-items {
 	margin: auto;
+}
+
+.ico-loading {
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	background-image: url("/images/icon/loading.svg");
+	background-size: contain;
 }

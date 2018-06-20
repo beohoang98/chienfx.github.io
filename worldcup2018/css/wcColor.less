@@ -1,19 +1,29 @@
+@import "./wcVar.less";
+
 :root {
-	--wc-primColor: #D30208;
+	--wc-primColor: @prim;
 
-	--wc-high0: #e5c685;
-	--wc-high1: #F5EED5;
+	--wc-high0: @high0;
+	--wc-high1: @high1;
 
-	--wc-low0: #015386;
-	--wc-low1: #0074B1;
+	--wc-low0: @low0;
+	--wc-low1: @low1;
 
-	--wc-text0: #F5EED5;
-	--wc-text1: #171714;
+	--wc-text0: @text0;
+	--wc-text1: @text1;
 
-	--wc-trans: 0.5s;
+	--wc-trans: @trans;
 }
 
 @font-face {
 	font-family: "Dusha";
-	src: url("/worldcup2018/font/Dusha.ttf") format('truetype');
+	src: url("/worldcup2018/font/Dusha\ -\ FIFA\ World\ Cup\ 2018\ Viethoa\ by\ TranHuuDuc.ttf") format('truetype');
+}
+
+.wcFont {
+	font-family: "Dusha", fantasy;
+}
+
+.wcSans {
+	font-family: sans-serif;
 }

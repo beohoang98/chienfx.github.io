@@ -8,6 +8,7 @@ $.fn.wcGroupTable = function(groupData, opt)
 	const groupTBody = makeGroupTBody(groupData, opt)
 							.appendTo(groupTable);
 
+	this.children().remove();
 	this.append(groupBody);
 	return this;
 }
@@ -51,7 +52,7 @@ function makeGroupRow(values, opt)
 		let cell = $('<td/>');
 		if (!!colInfo.class) cell.addClass(colInfo.class);
 		cell.text(values.team[colInfo.value]);
-		cell.attr('data-id', values.team.id);
+		cell.attr('data-code', values.team.fifa_code);
 		cell.appendTo(row);
 	}
 

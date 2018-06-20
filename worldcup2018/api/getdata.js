@@ -47,12 +47,15 @@ async function getTeamsData()
 
 	for (const team of rawData.data)
 	{
-		teamList[team.id] = team;
+		teamList[team.fifa_code] = team;
 	}
 
 	return teamList;
 }
 
+/**
+ * get group standing info
+ */
 async function getGroupInfo()
 {
 	const rawGroupList = await getWCData('teams/group_results');
@@ -93,20 +96,37 @@ async function getAllFlags(teamsData)
 	const flags_team = {};
 	const lookupISOCode = await getMyISOLookup();
 
-	for (const id of Object.keys(teamsData))
+	for (const code of Object.keys(teamsData))
 	{
-		let code = teamsData[id].fifa_code;
+		let isoCode = code;
 
-		if (lookupISOCode.hasOwnProperty(code))
+		if (lookupISOCode.hasOwnProperty(isoCode))
 		{
-			code = lookupISOCode[code];
+			isoCode = lookupISOCode[isoCode];
 		}
 		else {
-			code = code.slice(0,-1);
+			isoCode = isoCode.slice(0,-1);
 		}
 
-		flags_team[id] = "https://countryflags.io/"+code+"/flat/64.png";
+		flags_team[code] = "https://countryflags.io/"+isoCode+"/flat/64.png";
 	}
 
 	return flags_team;
+}
+
+
+async function getGames()
+{
+	const rawGroupList = await getWCData('matches/');
+	let gamesList = [];
+
+	if (rawGroupList.err)
+	{
+		console.log(rawGroupList.msg);
+		return null;
+	}
+
+	gamesList = rawGroupList.data;
+
+	return gamesList;
 }

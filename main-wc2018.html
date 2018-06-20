@@ -4,16 +4,22 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>CFx Blog</title>
-	<link href="css/menu.css" rel="stylesheet" type="text/css" />
-	<link href="css/layout1.css" rel="stylesheet" type="text/css" />
-	<script src="p7mbm/p7MBscripts.js" type="text/javascript"></script>
-	<link href="p7mbm/p7MBM07v.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="/css/menu.css" rel="stylesheet" type="text/css" />
+	<link href="/css/layout1.css" rel="stylesheet" type="text/css" />
+	<!-- <script src="p7mbm/p7MBscripts.js" type="text/javascript"></script>
+	<link href="p7mbm/p7MBM07v.css" rel="stylesheet" type="text/css" media="all" /> -->
 	<!-- Start WOWSlider.com HEAD section -->
-	<link href="engine1/style.css" rel="stylesheet" type="text/css" />
-	<script src="engine1/jquery.js" type="text/javascript"></script>
+	<link href="/engine1/style.css" rel="stylesheet" type="text/css" />
+	<script src="/engine1/jquery.js" type="text/javascript"></script>
 	<!-- End WOWSlider.com HEAD section -->
 
-	<link rel="stylesheet" href="/worldcup2018/css/wcGroupTable.css">
+	<link rel="stylesheet" href="/worldcup2018/css/wc18.css">
+	<link rel="stylesheet" href="/css/myTab.css">
+
+	<script src="/worldcup2018/api/getdata.js"></script>
+	<script src="/worldcup2018/api/makeGroupTable.js"></script>
+	<script src="/worldcup2018/api/makeLichThiDau.js"></script>
+	<script src="/engine1/loadOtherHTML.js"></script>
 </head>
 
 <body>
@@ -50,10 +56,9 @@
 		<div class="clear"></div>
 		<!--menu-->
 		<div class="mainMenu">
-
 			<div class="menu_form">
 				<div class="menu_item">
-					<a href="index.html">Home</a>
+					<a href="/index.html">Home</a>
 				</div>
 				<div class="menu_item">
 					<a href="#">Study</a>
@@ -65,109 +70,102 @@
 					<a href="#" title="Software sharing">Software</a>
 				</div>
 				<div class="menu_item active">
-					<a href="main-wc2018.html" title="World Cup 2018">World Cup 2018</a>
+					<a href="/main-wc2018.html" title="World Cup 2018">World Cup 2018</a>
 				</div>
 				<div class="menu_item">
-					<a href="ms-ha-liturature.html" title="All my stories">Story</a>
+					<a href="/ms-ha-liturature.html" title="All my stories">Story</a>
 				</div>
 				<div class="menu_item" style="float:right; border-left-width: 1px; border-left-style: solid; border-left-color: #CCC;">
-					<a href="aboutme.html" title="Introduction to me">About me</a>
+					<a href="/aboutme.html" title="Introduction to me">About me</a>
 				</div>
 			</div>
 		</div>
 		<div class="clear"></div>
 
-		<div class="contentWrapper">
+		<!-- SOCIAL LINK -->
+		<link rel="stylesheet" href="/css/social.css">
+		<div class="social" style="left: 0; top: 50px">
+			<a href="https://github.com/ChienFx" title="Github Repo" target="_blank" class="social-link social-link-github">Github</a>
+			<a href="https://www.fb.com/chienpham304" title="Facebook Profile" target="_blank" class="social-link social-link-fb">Facebook</a>
+		</div>
 
-			<div class="verticalMenu">
-				<div id="p7MBM_2" class="p7MBM07v">
-					<ul>
-						<li>
-							<a href="https://github.com/ChienFx" title="Github Repo" target="_blank">
-								<img src="images/icon/github.png" width="32px" height="32px" />
-							</a>
-
-						</li>
-						<li>
-							<a href="https://www.fb.com/chienpham304" title="Facebook Profile" target="_blank">
-								<img src="images/icon/fb_32.png" width="32px" height="32px" />
-							</a>
-						</li>
-
-
-					</ul>
-					<!--[if lte IE 6]>
-        <style>.p7MBM07v li, .p7MBM07v li a {height: 1%;}</style>
-        <![endif]-->
-					<script type="text/javascript">
-						P7_MBop('p7MBM_2', 0, 0, 0, -92, 0, 0, 400, 320, 0, 1);
-						//-->
-					</script>
-				</div>
-			</div>
-
-			<div class="wc-banner"></div>
-			<div class="content" style="font-size:20px" align="justify">
-				<!-- <div class="wc-tittle">WORLD CUP 2018</div> -->
-				<div class="clear"></div>
-				<details class='wc-panel'>
-					<summary class="wc-panel-head">Lịch thi đấu - Bảng xếp hạng</summary>
-					<iframe src="https://thethao247.vn/63-lich-thi-dau-world-cup-2018-d151791.html" style="border:0; margin-bottom:10px" width="100%"
-					  height="600" frameborder="0" scrolling="yes"></iframe>
-				</details>
-
-				<!--List groups-->
-				<div class='flex'>
-					<div class="wc-group">
-						<a href="wc-groupA.html" target="_blank" title="Group A">
-							<img class="group-ico" src="images/wc/group-a.png" /> Group A
-						</a>
-					</div>
-					<div class="wc-group">
-						<a href="wc-groupB.html" target="_blank" title="Group B">
-							<img class="group-ico" src="images/wc/group-b.png" /> Group B
-						</a>
-					</div>
-					<div class="wc-group">
-						<a href="wc-groupC.html" target="_blank" title="Group C">
-							<img class="group-ico" src="images/wc/group-c.png" /> Group C
-						</a>
-					</div>
-					<div class="wc-group">
-						<a href="wc-groupD.html" target="_blank" title="Group D">
-							<img class="group-ico" src="images/wc/group-d.png" /> Group D
-						</a>
-					</div>
-					<div class="wc-group">
-						<a href="wc-groupE.html" target="_blank" title="Group E">
-							<img class="group-ico" src="images/wc/group-e.png" /> Group E
-						</a>
-					</div>
-					<div class="wc-group">
-						<a href="wc-groupF.html" target="_blank" title="Group F">
-							<img class="group-ico" src="images/wc/group-f.png" /> Group F
-						</a>
-					</div>
-					<div class="wc-group">
-						<a href="wc-groupG.html" target="_blank" title="Group G">
-							<img class="group-ico" src="images/wc/group-g.png" /> Group G
-						</a>
-					</div>
-					<div class="wc-group">
-						<a href="wc-groupH.html" target="_blank" title="Group H">
-							<img class="group-ico" src="images/wc/group-h.png" /> Group H
-						</a>
+		<div class="contentWrapper wc-banner">
+			<div style="height: 50vh"></div>
+			<div class="content" style="float: none; background: white" align="justify">
+				
+				<div class="tab">
+					<nav class="tab-nav">
+						<a href="#" class="tab-nav-a wcFont tab-active" data-for="lich-thi-dau">Lịch Thi Đấu Vòng Bảng</a>
+						<a href="#" class="tab-nav-a wcFont" data-for="bang-xep-hang">Bảng xếp hạng</a>
+						<a href="#" class="tab-nav-a wcFont" data-for="bieu-do">Vòng Knockout</a>
+						<a href="#" class="tab-nav-a wcFont" data-for="thong-so">Thông số</a>
+					</nav>
+					<div class="tab-body">
+						<div id="lich-thi-dau" class="tab-content tab-active">
+							<button id="seeOld" class='wcFont'>Xem Các trận cũ hơn</button>
+							<div data-role="content" class="flex">
+								<div>
+									<h2 class='wcFont'>LOADING...</h2>
+									<span class="ico-loading"></span>
+								</div>
+							</div>
+						</div>
+						<div id="bang-xep-hang" class="tab-content">
+								<!-- <div class='flex'>
+										<div class="wc-group">
+											<a href="wc-groupA.html" target="_blank" title="Group A">
+												<img class="group-ico" src="images/wc/group-a.png" /> Group A
+											</a>
+										</div>
+										<div class="wc-group">
+											<a href="wc-groupB.html" target="_blank" title="Group B">
+												<img class="group-ico" src="images/wc/group-b.png" /> Group B
+											</a>
+										</div>
+										<div class="wc-group">
+											<a href="wc-groupC.html" target="_blank" title="Group C">
+												<img class="group-ico" src="images/wc/group-c.png" /> Group C
+											</a>
+										</div>
+										<div class="wc-group">
+											<a href="wc-groupD.html" target="_blank" title="Group D">
+												<img class="group-ico" src="images/wc/group-d.png" /> Group D
+											</a>
+										</div>
+										<div class="wc-group">
+											<a href="wc-groupE.html" target="_blank" title="Group E">
+												<img class="group-ico" src="images/wc/group-e.png" /> Group E
+											</a>
+										</div>
+										<div class="wc-group">
+											<a href="wc-groupF.html" target="_blank" title="Group F">
+												<img class="group-ico" src="images/wc/group-f.png" /> Group F
+											</a>
+										</div>
+										<div class="wc-group">
+											<a href="wc-groupG.html" target="_blank" title="Group G">
+												<img class="group-ico" src="images/wc/group-g.png" /> Group G
+											</a>
+										</div>
+										<div class="wc-group">
+											<a href="wc-groupH.html" target="_blank" title="Group H">
+												<img class="group-ico" src="images/wc/group-h.png" /> Group H
+											</a>
+										</div>
+									</div> -->
+						</div>
+						<div id="a" class="tab-content"></div>
+						<div id="a" class="tab-content"></div>
 					</div>
 				</div>
-				<div class="clear"></div>
 				<div class="box">
 					<a href="pre-world-cup.html" target="_blank" title="Tổng hợp Hightlight tiền World Cup 2018">
 						Giao hữu tiền World Cup 2018
 					</a>
 				</div>
 			</div>
-			<!--<div class="siteRight">Content for  class "siteRight" Goes Here</div>-->
 		</div>
+
 		<div class="clear"></div>
 		<div class="footer">
 			CFx Blog Info
@@ -178,21 +176,52 @@
 		</div>
 	</div>
 	<!---Scrip area -->
+	<script src="/engine1/myTab.js"></script>
 	<script>
-		window.onscroll = function () {
-			myFunction()
-		};
+		loadHTML("/worldcup2018/group/_group.html", $("#bang-xep-hang").get(0));
+		
+		document.addEventListener('DOMContentLoaded', async()=>{
+			const div = $("#lich-thi-dau div[data-role='content']");
 
-		var header = document.getElementById("");
-		var sticky = header.offsetHeight;
+			const teams = await getTeamsData();
+			const flags_team = await getAllFlags(teams);
+			const games = await getGames();
 
-		function myFunction() {
-			if (window.pageYOffset >= sticky) {
-				header.classList.add("sticky");
-			} else {
-				header.classList.remove("sticky");
-			}
-		}
+			div.html("");
+			$("#seeOld").on('click', function (){
+				div.find('.past').show();
+				$(this).remove();
+			});
+			
+
+			games.forEach(val=>{
+				const hometeam = val.home_team;
+				const awayteam = val.away_team;
+
+				if (hometeam.code == "TBD") return; //TBD - To Be Determind - Cac tran dau chua xac dinh
+				const groupName = teams[hometeam.code].group_letter;
+				
+				
+				const newDiv = createMatchPanel({
+					"group": groupName,
+					"status": val.status,
+					"time": val.datetime,
+					"hometeam": {
+						"name": hometeam.country,
+						"goals": hometeam.goals
+					},
+					"awayteam": {
+						"name": awayteam.country,
+						"goals": awayteam.goals
+					},
+					"link" : "/worldcup2018/highlight.html?id="+hometeam.code+"vs"+awayteam.code
+				});
+
+				div.append(newDiv);
+			});
+
+			
+		});
 	</script>
 </body>
 
