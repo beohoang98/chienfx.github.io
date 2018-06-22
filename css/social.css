@@ -1,1 +1,15 @@
-.social{position:fixed;z-index:9999;display:inline-block;filter:drop-shadow(0 5px 10px rgba(0,0,0,0.5));font-family:sans-serif}.social-link{display:block;position:relative;height:50px;line-height:50px;text-decoration:none;padding:0 1rem;background-color:white;color:black;transition:.2s;transform:translateX(-100%)}.social-link:hover{transform:translateX(0)}.social-link::after{content:"";position:absolute;top:0;left:100%;width:50px;height:50px;background-size:100%;border-radius:0 50% 50% 0}.social-link-fb{background-color:blue;background-image:linear-gradient(to right, blue, darkblue);color:white}.social-link-fb::after{background-color:darkblue;background-image:url("/images/icon/fb_white.svg")}.social-link-github{background-color:#333;background-image:linear-gradient(to right, #333, #111);color:white}.social-link-github::after{background-color:#111;background-image:url("/images/icon/github_white.svg")}
+.social{position:fixed;z-index:9999;display:inline-block;filter:drop-shadow(0 5px 10px rgba(0,0,0,0.5));font-family:sans-serif}
+.social-link{display:block;position:relative;height:50px;line-height:50px;text-decoration:none;padding:0 1rem;background-color:white;color:black;transition:.2s;transform:translateX(-100%)}
+
+.social-link:hover{transform:translateX(0)}
+.social-link::after{content:"";position:absolute;top:0;left:100%;width:50px;height:50px;background-size:100%;border-radius:0 50% 50% 0}
+
+/*.social-link-fb{background-color:blue;background-image:linear-gradient(to right, blue, darkblue);color:white}
+.social-link-fb::after{background-color:darkblue;background-image:url("/images/icon/fb_white.svg")}
+*/
+
+.social-link-fb{background-color:#333;background-image:linear-gradient(to right, #333, #111);color:white}
+.social-link-fb::after{background-color:#111;background-image:url("/images/icon/fb_white.svg")}
+
+.social-link-github{background-color:#333;background-image:linear-gradient(to right, #333, #111);color:white}
+.social-link-github::after{background-color:#111;background-image:url("/images/icon/github_white.svg")}
