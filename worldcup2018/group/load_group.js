@@ -20,9 +20,9 @@ async function _group_Loading() {
 				{title: "T", value: "wins"},
 				{title: "H", value: "draws"},
 				{title: "B", value: "losses"},
-				// {title: "TG", value: "goals_for"},
-				// {title: "TH", value: "goals_against"},
-				// {title: "HS", value: "goal_differential"},
+				{title: "TG", value: "goals_for"},
+				{title: "TH", value: "goals_against"},
+				{title: "HS", value: "goal_differential"},
 				{title: "Điểm", value: "points"}
 			]
 		});

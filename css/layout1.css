@@ -269,3 +269,17 @@ h2 {
 	background-image: url("/images/icon/loading.svg");
 	background-size: contain;
 }
+
+/* responsible css */
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.col-6 {
+	width: 50%;
+	float: left;
+	padding: 5px;
+	box-sizing: border-box;
+}
