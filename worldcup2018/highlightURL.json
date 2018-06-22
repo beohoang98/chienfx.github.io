@@ -20,7 +20,7 @@
 		"name": "Iran vs Tây Ban Nha Highlights",
 		"url": "http://footy1.matchat.online/player/50826"
 	},
-	"DENvs"AUS: {
+	"DENvsAUS": {
 		"name": "Đan Mạch vs Úc Highlights",
 		"url": "http://footy1.matchat.online/player/KyDJhQGERp"
 	},
@@ -67,10 +67,6 @@
 	"ARGvsISL": {
 		"name": "Argentina vs Ai len",
 		"url": "https://footy1.matchat.online/player/50604"
-	},
-	"RUSvsKSA": {
-		"name": "Nga vs Ả Rập",
-		"url": "https://footy1.matchat.online/player/50519"
 	}
 	
 }
